@@ -28,7 +28,7 @@ class Main extends Phaser.State {
 		this.cats = []
 		this.game.input.mouse.capture = true
 		this.game.fail = false
-		for(let i=0; i<1; i++) {
+		for(let i=0; i<10; i++) {
 			this.cats.push(new Cat(this.game, 0, this.game.width/2, this.game.height/2))
 		}
 
@@ -53,7 +53,7 @@ class Main extends Phaser.State {
 	update() {
 		this.step += 1
 
-		if (this.step % 100 == 0) {
+		if (this.step == 150) {
 			this.gameoverLabel.visible = false
 		}
 
